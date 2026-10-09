@@ -1,0 +1,59 @@
+{
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "icon": "icon.png",
+    "category": "custom"
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "name": "Teste Code Resource",
+      "description": "Prova de conceito: tela em Code Resources e execute em dominio externo."
+    }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments": [
+        { "contactKey": "{{Contact.Key}}" },
+        { "origem": "code-resource-teste" }
+      ],
+      "outArguments": [],
+      "url": "https://httpbin.org/anything/execute",
+      "verb": "POST",
+      "format": "json",
+      "useJwt": true,
+      "timeout": 10000,
+      "retryCount": 0,
+      "retryDelay": 1000,
+      "concurrentRequests": 1
+    }
+  },
+  "configurationArguments": {
+    "applicationExtensionKey": "COLE_AQUI_A_UNIQUE_KEY_DO_INSTALLED_PACKAGE",
+    "save":     { "url": "https://httpbin.org/anything/save",     "verb": "POST", "useJwt": true },
+    "publish":  { "url": "https://httpbin.org/anything/publish",  "verb": "POST", "useJwt": true },
+    "validate": { "url": "https://httpbin.org/anything/validate", "verb": "POST", "useJwt": true },
+    "stop":     { "url": "https://httpbin.org/anything/stop",     "verb": "POST", "useJwt": true }
+  },
+  "wizardSteps": [
+    { "label": "Configurar", "key": "step1" }
+  ],
+  "userInterfaces": {
+    "configModal": {
+      "height": 420,
+      "width": 640,
+      "fullscreen": false
+    }
+  },
+  "schema": {
+    "arguments": {
+      "execute": {
+        "inArguments": [
+          { "contactKey": { "dataType": "Text", "isNullable": false, "direction": "in" } },
+          { "origem":     { "dataType": "Text", "isNullable": true,  "direction": "in" } }
+        ],
+        "outArguments": []
+      }
+    }
+  }
+}

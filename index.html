@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Teste Code Resource</title>
+  <style>
+    body { font-family: "Salesforce Sans", Arial, sans-serif; font-size: 14px; color: #181818; margin: 16px; }
+    h1 { font-size: 16px; margin: 0 0 12px; }
+    p { margin: 0 0 12px; line-height: 1.5; }
+    button { font: inherit; padding: 6px 14px; border: 1px solid #0176d3; background: #0176d3; color: #fff; border-radius: 4px; cursor: pointer; }
+    button:disabled { opacity: .6; cursor: default; }
+    .box { border: 1px solid #c9c9c9; border-radius: 4px; padding: 10px; margin-top: 12px; background: #f3f3f3; }
+    .ok { color: #2e844a; } .erro { color: #ba0517; }
+    pre { white-space: pre-wrap; word-break: break-all; font-size: 12px; margin: 8px 0 0; max-height: 140px; overflow: auto; }
+    code { background: #f3f3f3; padding: 1px 4px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Teste Code Resource</h1>
+  <p>Esta tela foi carregada a partir dos Code Resources. Ao clicar em <b>Done</b>,
+     a activity fica configurada e, na execução, o Journey Builder chama o <code>execute</code>
+     declarado no <code>config.json</code> (domínio externo).</p>
+
+  <button id="btnGet" type="button">Testar GET (https://httpbin.org/get)</button>
+  <div id="resultado" class="box" hidden></div>
+
+  <div class="box">
+    <div>Activity: <span id="statusConfig">aguardando o Journey Builder…</span></div>
+  </div>
+
+  <!-- Caminhos relativos: os arquivos ficam na mesma pasta do index.html. -->
+  <script src="postmonger.js"></script>
+  <script src="customActivity.js"></script>
+</body>
+</html>
