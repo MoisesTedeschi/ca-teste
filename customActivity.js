@@ -1,5 +1,5 @@
 /*
- * Teste Code Resource — lógica da tela da custom activity.
+ * ca-teste — lógica da tela da custom activity.
  * Roda no navegador, dentro do iframe do Journey Builder.
  * Não contém nenhum segredo (o arquivo é público).
  */

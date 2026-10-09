@@ -7,8 +7,8 @@
   "type": "REST",
   "lang": {
     "en-US": {
-      "name": "Teste Code Resource",
-      "description": "Prova de conceito: tela em Code Resources e execute em dominio externo."
+      "name": "ca-teste",
+      "description": "Prova de conceito: tela no GitHub Pages e execute em dominio externo."
     }
   },
   "arguments": {
@@ -29,7 +29,7 @@
     }
   },
   "configurationArguments": {
-    "applicationExtensionKey": "COLE_AQUI_A_UNIQUE_KEY_DO_INSTALLED_PACKAGE",
+    "applicationExtensionKey": "fb722101-a293-43b7-b4d1-b503f125e75e",
     "save":     { "url": "https://httpbin.org/anything/save",     "verb": "POST", "useJwt": true },
     "publish":  { "url": "https://httpbin.org/anything/publish",  "verb": "POST", "useJwt": true },
     "validate": { "url": "https://httpbin.org/anything/validate", "verb": "POST", "useJwt": true },
